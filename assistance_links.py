@@ -34,7 +34,17 @@ class AssistanceLinks:
         embed.set_author(name="Plailect")
         embed.set_thumbnail(url="https://avatars3.githubusercontent.com/u/16979510?v=48&s=500")
         await ctx.send(embed=embed)
-        
+	
+    @commands.command(pass_context=True)
+    async def ReiNAND(self, ctx):
+        """Links to latest ReiNAND version"""
+        await ctx.message.delete()
+        embed = discord.Embed(title="ReiNAND", color=65535)
+        embed.description = "You can download ReiNAND 5.1 [here](https://github.com/Reisyukaku/ReiNand/releases/tag/v5.1). Please keep in mind this will work for all ARM9 entrypoints except for B9S and System FW's that are 11.3 and lower (unless you copy the firmware.bin file from the repo that has 11.4 support)."
+        embed.set_thumbnail(url="https://avatars3.githubusercontent.com/u/2438555?v=4&s=400")
+        embed.set_author(name="Reisyukaku")
+        await ctx.send(embed=embed)
+
     @commands.command(pass_context=True)
     async def ua9lh(self, ctx):
         """arm9loaderhax to boot9strap update guide"""
@@ -64,7 +74,7 @@ class AssistanceLinks:
             embed.description = "You can get luma 7.0.5, 7.1, and/or 8.1.1 below"
             embed.set_author(name="Aurora Wright")
             embed.set_thumbnail(url="https://gbatemp.net/attachments/Luma3DSalt-png.46691/")
-            embed.add_field(name="Luma3DS 7.0.5", value="You can download Luma3DS 7.0.5 [here](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5). Please keep in mind that this version will only work for A9LH.")
+            embed.add_field(name="Luma3DS 7.0.5", value="You can download Luma3DS 7.0.5 [here](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.0.5). Please keep in mind this will work for all ARM9 entrypoints except for B9S.")
             embed.add_field(name="Luma3DS 7.1", value="You can download Luma3DS 7.1 [here](https://github.com/AuroraWright/Luma3DS/releases/tag/v7.1). Please keep in mind this version will only work for B9S 1.0.")
             embed.add_field(name="Luma3DS 8.1.1", value="You can download the latest Luma3DS version [here](https://github.com/AuroraWright/Luma3DS/releases/tag/v8.1.1). Please keep in mind this version will only work for B9S 1.2.")
             embed.add_field(name="Latest Luma", value="You can always get the absolute latest version of Luma3DS [here](https://github.com/AuroraWright/Luma3DS/releases/latest). Please keep in mind you will need the latest version of B9S to be able to use it.")
@@ -75,7 +85,7 @@ class AssistanceLinks:
         """Links to Luma3DS version 7.0.5"""
         await ctx.message.delete()
         embed = discord.Embed(title="Luma3DS 7.0.5", color=65535)
-        embed.description = "You can download Luma3DS 7.0.5 [here](https://github.com/AuroraWright/releases/tag/v7.0.5). Please keep in mind this version will only work for A9LH."
+        embed.description = "You can download Luma3DS 7.0.5 [here](https://github.com/AuroraWright/releases/tag/v7.0.5). Please keep in mind this will work for all ARM9 entrypoints except for B9S."
         embed.set_thumbnail(url="https://gbatemp.net/attachments/Luma3DSalt-png.46691/")
         embed.set_author(name="Aurora Wright")
         await ctx.send(embed=embed)
