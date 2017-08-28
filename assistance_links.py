@@ -178,9 +178,9 @@ class AssistanceLinks:
         """Compatibility list for what flashcarts do and do not work for ntrboot"""
         await ctx.message.delete()
         embed = discord.Embed(title="Compatibility List for NTRBoot")
-        embed.description = "Only the two flashcarts on the left can currently be used for NTRBoot. If your flashcart does not look exactly like one of those two, it can not currently be used for NTRBoot."
-        embed.set_image(url="https://cdn.discordapp.com/attachments/346830960668573697/346831110329860096/cart_list_V1.0.png")
-        embed.set_author(name="EdTheNerd")
+        embed.description = "Only the flashcarts on the left can currently be used for NTRBoot. If your flashcart does not look exactly like one of those, it can not currently be used for NTRBoot."
+        embed.set_image(url="https://raw.githubusercontent.com/PhazonicRidley/Assistance-Links/master/flashcarts.png")
+        embed.set_author(name="EdTheNerd,Jisagi")
         await ctx.send(embed=embed)
         
     @commands.command(aliases=['gm9'], pass_context=True)
@@ -210,6 +210,25 @@ class AssistanceLinks:
         embed = discord.Embed(title="Boot9strap Download Link", color=59110)
         embed.description = "Click [here](https://github.com/SciresM/boot9strap/releases/download/1.2/boot9strap-1.2.zip) for a direct link for the normal version of boot9strap."
         embed.set_author(name="SciresM")
+        await ctx.send(embed=embed)
+
+    @commands.command(pass_context=True)
+    async def themely(self,ctx):
+        """themely download link"""
+        await ctx.message.delete()
+        embed = discord.Embed(title="Themely download link", color=9699539)
+        embed.description = "You can get Themely [here](https://github.com/ihaveamac/Themely/releases/latest). We recommend you to get themes from [Theme Plaza](https://themeplaza.eu/themes) or [3dsthem.es Archive](http://3dsthemesarchive.site/?type=themes). We don't recommend you to use 3dsthem.es and Erman's closed source Themely because he has become anti-user."
+        embed.set_author(name="ErmanSayin and ihaveamac")
+        embed.set_thumbnail(url="https://github.com/ihaveamac/Themely/raw/master/meta/banner_3ds.png")
+        await ctx.send(embed=embed)
+
+    @commands.command(pass_context=True)
+    async def jksm(self,ctx):
+        """JKSM Download Links"""
+        await ctx.message.delete()
+        embed = discord.Embed(title="JKSM Download Links", color=16777215)
+        embed.description = "You can download the CIA version of JSKM [here](https://github.com/J-D-K/JKSM/raw/master/JKSM.cia), the 3dsx/hax version [here](https://github.com/J-D-K/JKSM/raw/master/JKSM.3dsx), or the Rosalina compatible 3dsx [here](https://github.com/Phalk/JKSM/releases/latest)."
+        embed.set_author(name="J-D-K")
         await ctx.send(embed=embed)
 
 def setup(bot):
